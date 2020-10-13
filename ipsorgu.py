@@ -6,7 +6,7 @@ try:
     ipaddr = sys.argv[1]
     print("Please wait..")
 except IndexError:
-    print("Please Entered IP Adress")
+    print("Please Entera Valid IP Adress")
 try:
     req = requests.get("http://www.ipsorgu.com/?ip=" + str(ipaddr) + "#sorgu")
     
@@ -47,4 +47,4 @@ except SyntaxError:
     print("Please enter a correct IP")
 except (NameError, IndexError) as e:
     if e == NameError or e == IndexError:
-        print("Please Entered IP Adress")
+        print("Please Enter a Valid IP Adress")
